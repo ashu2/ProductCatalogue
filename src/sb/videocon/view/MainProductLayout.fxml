@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="sb.videocon.controller.MainProductLayoutController">
+	<children>
+		<TabPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0"
+			prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Fresh Arrival">
+
+					<BorderPane>
+						<center>
+							<TableView fx:id="productFreshArrivalTable" prefHeight="200.0"
+								prefWidth="200.0" BorderPane.alignment="CENTER">
+								<columns>
+									<TableColumn fx:id="serialNoFAColumn" prefWidth="75.0"
+										text="Serial No" />
+									<TableColumn fx:id="pNameFAColumn" prefWidth="75.0"
+										text="Product Name" />
+									<TableColumn fx:id="costFAColumn" prefWidth="75.0"
+										text="Cost" />
+									<TableColumn fx:id="brandFAColumn" prefWidth="75.0"
+										text="Brand" />
+									<TableColumn fx:id="categoryFAColumn" prefWidth="75.0"
+										text="Category" />
+
+								</columns>
+							</TableView>
+						</center>
+						<bottom>
+							<HBox id="HBox" alignment="CENTER" minWidth="-1.0" spacing="5.0"
+								AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+								<children>
+									<Button mnemonicParsing="false" onAction="#handleSellProduct"
+										prefWidth="80.0" text="Sell" />
+									<Button mnemonicParsing="false" onAction="#handleAssignProduct"
+										prefWidth="80.0" text="Assign" />
+								</children>
+							</HBox>
+						</bottom>
+					</BorderPane>
+
+				</Tab>
+				<Tab text="Defected">
+					<content>
+						<TableView prefHeight="200.0" prefWidth="200.0" fx:id="productDefectedTable">
+							<columns>
+								<TableColumn fx:id="serialNoDFColumn" prefWidth="75.0"
+										text="Serial No" />
+									<TableColumn fx:id="pNameDFColumn" prefWidth="75.0"
+										text="Product Name" />
+									<TableColumn fx:id="costDFColumn" prefWidth="75.0"
+										text="Cost" />
+									<TableColumn fx:id="brandDFColumn" prefWidth="75.0"
+										text="Brand" />
+									<TableColumn fx:id="categoryDFColumn" prefWidth="75.0"
+										text="Category" />
+
+							</columns>
+						</TableView>
+					</content>
+				</Tab>
+				<Tab text="Sold Out">
+					<content>
+						<TableView prefHeight="200.0" prefWidth="200.0" fx:id="productSoldOutTable">
+							<columns>
+								<TableColumn fx:id="serialNoSOColumn" prefWidth="75.0"
+										text="Serial No" />
+									<TableColumn fx:id="pNameSOColumn" prefWidth="75.0"
+										text="Product Name" />
+									<TableColumn fx:id="costSOColumn" prefWidth="75.0"
+										text="Cost" />
+									<TableColumn fx:id="brandSOColumn" prefWidth="75.0"
+										text="Brand" />
+									<TableColumn fx:id="categorySOColumn" prefWidth="75.0"
+										text="Category" />
+
+							</columns>
+						</TableView>
+					</content>
+				</Tab>
+				<Tab text="Dispatched">
+					<content>
+						<TableView prefHeight="200.0" prefWidth="200.0" fx:id="productDispatchedTable">
+							<columns>
+								<TableColumn fx:id="serialNoDPColumn" prefWidth="75.0"
+										text="Serial No" />
+									<TableColumn fx:id="pNameDPColumn" prefWidth="75.0"
+										text="Product Name" />
+									<TableColumn fx:id="costDPColumn" prefWidth="75.0"
+										text="Cost" />
+									<TableColumn fx:id="brandDPColumn" prefWidth="75.0"
+										text="Brand" />
+									<TableColumn fx:id="categoryDPColumn" prefWidth="75.0"
+										text="Category" />
+
+							</columns>
+						</TableView>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>
